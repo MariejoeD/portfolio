@@ -1,0 +1,117 @@
+<ht<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="project.css">
+    <title>Projects</title>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="about.html">About</a>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+
+
+    <section>
+
+    	<div class="wrapper">
+
+
+		    <div class="typing-demo">
+		      Here are my projects.
+		    </div>
+		</div>
+
+        <div class="container">
+            <!-- Project 1 -->
+            <a href="https://mariejoed.github.io/zchiren/" class="card-link">
+                <div class="card">	
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="proj1.jpg" alt="Project 1 Image">
+                        </div>
+                        <div class="contentBx">
+                            <h3>Project 1<br><span>Made this simple website for my friend's birthday! <3</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li>
+                            <a href="https://mariejoed.github.io/zchiren/">Click to View</a>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+
+            <!-- Project 2 -->
+            <a href="https://mariejoed.github.io/to-do-list/" class="card-link">
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="proj2.jpg" alt="Project 2 Image">
+                        </div>
+                        <div class="contentBx">
+                            <h3>Project 2<br><span> I made this when I start practicing web development</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li>
+                            <a href="https://mariejoed.github.io/to-do-list/">Click Here to View</a>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+
+            <!-- Project 3 -->
+            <a href="https://mariejoed.github.io/Surprise-Message/" class="card-link">
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="proj3.jpg" alt="Project 3 Image">
+                        </div>
+                        <div class="contentBx">
+                            <h3>Project 3<br><span> Made this also for a friend, to cheer her up. </span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li>
+                            <a href="https://mariejoed.github.io/Surprise-Message/">Click Here to View</a>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+    </section>
+
+<script>
+    // JavaScript for responsive navigation and smooth scrolling
+    const navbar = document.querySelector('.navbar');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - navbar.clientHeight,
+                    behavior: 'smooth'
+                });
+            }
+
+            navbar.classList.remove('show');
+        });
+    });
+</script>
+
+</body>
+</html>

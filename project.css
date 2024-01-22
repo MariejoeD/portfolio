@@ -1,0 +1,220 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #faa9e0;
+background: -webkit-radial-gradient(circle, #faa9e0 0%, #f8b3eb 50%, #eaa3fc 100%);
+background: radial-gradient(circle, #faa9e0 0%, #f8b3eb 50%, #eaa3fc 100%);
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.container .card-link {
+    text-decoration: none;
+
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+    cursor: pointer;
+    background: rgba(237,237,237,0.5);
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(237,237,237,0.25);
+}
+
+.container .card:hover {
+    transform: translateY(-20px);
+}
+
+.container .card .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .card .content .imgBx {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.container .card .content .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content .contentBx h3 {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+}
+
+.container .card .content .contentBx h3 span {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+}
+
+.container .card .sci {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+}
+
+.container .card .sci li {
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.container .card:hover .sci li {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .card .sci li a {
+    color: #fff;
+    font-size: 20px;
+}
+.wrapper {
+  height: 10vh;
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffa07a; /* Change the color on hover */
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        right: 0;
+        top: 60px; /* Adjust this value to prevent overlapping with content */
+        background-color: #333;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: none;
+        width: 100%;
+        padding: 10px;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+    }
+
+    .navbar.show {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .navbar a {
+        margin: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1001;
+        opacity: 0.7;
+        transition: opacity 0.3s ease-in-out;
+
+    }
+
+     .menu-toggle:checked + .navbar {
+        transform: translateY(0);
+    }
+
+ .navbar a:hover {
+        color: #ffa07a; /* Change the color on hover */
+        transform: scale(1.1);
+    }
