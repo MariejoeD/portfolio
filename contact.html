@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me | Mariejoe B. Diamzon</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Mariejoe</div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="contact.html" class="active">CONTACT ME</a>
+    </nav>
+  </header>
+
+  <main class="contact-section">
+    <h1>Get in Touch</h1>
+    <p>If you want to discuss projects, collaborations, or say hello, feel free to reach out!</p>
+
+    <form action="mailto:diamzonmariejoeb@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h2>Other Ways to Connect</h2>
+      <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Mariejoe Diamzon. All rights reserved.</p>
+  </footer>
+</body>
+</html>
