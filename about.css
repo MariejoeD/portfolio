@@ -1,146 +1,214 @@
 /* Reset and Base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #121212;
-    color: #fdf6e3;
-    overflow-x: hidden;
-  }
-  
-  /* Header */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: rgba(18, 18, 18, 0.9);
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: background 0.3s ease;
-  }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 24px;
-    color: #fff;
-    transition: transform 0.3s ease;
-  }
-  
-  .logo:hover {
-    transform: scale(1.1);
-  }
-  
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #fdf6e3;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  nav a.active,
-  nav a:hover {
-    color: #ffafcc;
-    border-bottom: 2px solid #ffafcc;
-  }
-  
-  /* About Section */
-  .about-section {
-    padding: 60px 50px;
-    min-height: 80vh;
-    animation: fadeUp 1s ease-in-out;
-  }
-  
-  .about-content {
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .about-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffafcc;
-  }
-  
-  .about-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: #fdf6e3;
-  }
-  
-  .about-content h2 {
-    margin-top: 30px;
-    font-size: 24px;
-    color: #e9aaff;
-  }
-  
-  .about-content ul {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 20px;
-  }
-  
-  .about-content ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-    color: #e9aaff;
-  }
-  
-  .about-content ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #ffafcc;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1f1f1f;
-    color: #bbb;
-  }
-  
-  /* Animations */
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Certifications Button */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #fdf6e3;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(18, 18, 18, 0.9);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fdf6e3;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+  color: #ffafcc;
+  border-bottom: 2px solid #ffafcc;
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 50px;
+  min-height: 80vh;
+  animation: fadeUp 1s ease-in-out;
+}
+
+.about-content {
+  max-width: 850px;
+  margin: auto;
+}
+
+.about-content h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #ffafcc;
+  text-align: center;
+}
+
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px #ffafcc;
+  border: 3px solid #e9aaff;
+}
+
+.bio {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fdf6e3;
+}
+
+.bio p {
+  margin-bottom: 15px;
+}
+
+.about-content h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #e9aaff;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.skill {
+  background: rgba(255, 175, 204, 0.15);
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 175, 204, 0.3);
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  color: #e9aaff;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.skill:hover {
+  background-color: #ffafcc;
+  color: #121212;
+  transform: scale(1.05);
+  cursor: default;
+}
+
+.skill-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+.skill-text strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.skill-text p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: inherit;
+}
+
+
+/* Certifications Button */
 .btn-certifications {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 12px 28px;
-    background-color: #ffafcc;
-    color: #121212;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(255, 175, 204, 0.4);
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin: 0 auto 20px;
+  padding: 14px 32px;
+  background-color: #ffafcc;
+  color: #121212;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(255, 175, 204, 0.4);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  display: block;
+  width: max-content;
+}
+
+.btn-certifications:hover {
+  background-color: #e996b9;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+  color: #bbb;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   
-  .btn-certifications:hover {
-    background-color: #e996b9;
-    color: #fff;
-    transform: scale(1.05);
+  .bio {
+    font-size: 16px;
   }
   
-  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+}
